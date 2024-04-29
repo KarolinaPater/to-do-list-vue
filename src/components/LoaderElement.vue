@@ -1,0 +1,35 @@
+<template>
+  <div class="loader-wrapper">
+    <span className="loader"></span>
+  </div>
+</template>
+
+<style scoped>
+.loader-wrapper {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 62px;
+  height: 62px;
+  border: 10px solid rgb(148, 74, 144);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>

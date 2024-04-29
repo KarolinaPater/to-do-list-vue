@@ -1,0 +1,58 @@
+@import './base.css';
+
+.page {
+  margin: 50px;
+}
+
+.button {
+  margin: 30px;
+  margin-left: 0px;
+  padding: 15px 30px;
+  color: rgba(133, 216, 255, 0.64);
+  background-color: #2e485a;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  border-color: rgba(69, 126, 153, 0.64);
+}
+
+.disabled-mode {
+  cursor: not-allowed;
+  background-color: gray;
+  color: darkcyan;
+}
+
+.disabled-mode:hover {
+  cursor: not-allowed;
+  background-color: gray;
+  color: darkcyan;
+}
+
+/* unvisited link */
+a:link {
+  color: rgba(133, 216, 255, 0.64);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+/* visited link */
+a:visited {
+  color: rgba(133, 216, 255, 0.64);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(69, 126, 153, 0.64);
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: rgb(19, 35, 43);
+}
