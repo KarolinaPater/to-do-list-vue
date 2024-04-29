@@ -6,6 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'https://karolinapater.github.io/to-do-list-vue/',
   define: { 'process.env': {} },
   plugins: [vue(), vueJsx(), svgLoader()],
   resolve: {
