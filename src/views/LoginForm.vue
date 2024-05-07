@@ -39,7 +39,6 @@ const handleLogin = () => {
       isLoading.value = false
     })
     .catch((error) => {
-      alert('Wystąpił błąd')
       alert(error.response.data.message || 'Błąd serwera')
       isLoading.value = false
     })
