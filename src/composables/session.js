@@ -16,13 +16,13 @@ const useSession = () => {
     isLogged.value = false
   }
 
-  const checkSession = () => {
+  const checkSession = async () => {
     const config = {
       headers: {
         'x-access-token': window.localStorage.getItem('todotoken') || undefined
       }
     }
-    axios
+    await axios
       .post(`${import.meta.env.VITE_APP_API}/session`, {}, config)
       .then((response) => {
         setSession(response.data.user)
@@ -31,7 +31,6 @@ const useSession = () => {
       })
       .catch(() => {
         clearSession()
-        alert('Brak autoryzacji')
         window.localStorage.removeItem('token')
       })
   }

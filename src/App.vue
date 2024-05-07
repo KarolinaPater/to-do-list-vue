@@ -7,13 +7,14 @@
 import { onMounted, ref } from 'vue'
 import useSession from '@/composables/session.js'
 import Layout from '@/layout/Layout.vue'
+import LoaderElement from './components/LoaderElement.vue'
 
 const isLoading = ref(true)
 
 const { checkSession } = useSession()
 
-onMounted(() => {
-  checkSession()
+onMounted(async () => {
+  await checkSession()
 
   isLoading.value = false
 })
